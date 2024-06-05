@@ -1,0 +1,23 @@
+
+spring:
+  application:
+    name: loan-agreement-manager
+  datasource:
+    url: jdbc:postgresql://localhost:5432/loan-agreement-manager
+    username: loan_user
+    password: loan_password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  liquibase:
+    default-schema: public
+    enabled: true
+
+server:
+  port: 8086
+
+keycloak:
+  client-id: role-agreement-manager
+  issuer-url: http://localhost:9090/realms/master
